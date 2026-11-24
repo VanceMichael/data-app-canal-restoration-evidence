@@ -115,7 +115,7 @@
         },
         "value": {
           "type": "number",
-          "description": "毫克每升读值"
+          "description": "毫克每升报告值；低于检出限时存限值，不表示真实值等于限值"
         },
         "lod": {
           "type": "number",
