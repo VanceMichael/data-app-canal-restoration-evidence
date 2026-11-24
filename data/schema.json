@@ -1,0 +1,294 @@
+{
+  "format_version": 1,
+  "synthetic": true,
+  "tables": {
+    "projects": {
+      "description": "修复空间、期间及工程量",
+      "columns": {
+        "id": {
+          "type": "string",
+          "description": "项目"
+        },
+        "reach": {
+          "type": "string",
+          "description": "河段"
+        },
+        "start_day": {
+          "type": "integer",
+          "description": "开工"
+        },
+        "deadline": {
+          "type": "integer",
+          "description": "期限"
+        },
+        "physical_work": {
+          "type": "string",
+          "description": "可结工程量单位"
+        },
+        "contract_cents": {
+          "type": "integer",
+          "description": "合同金额"
+        },
+        "retain_fraction": {
+          "type": "number",
+          "description": "保留比例"
+        }
+      },
+      "refs": {}
+    },
+    "promises": {
+      "description": "独立成效承诺允许的证据",
+      "columns": {
+        "id": {
+          "type": "string",
+          "description": "承诺"
+        },
+        "project": {
+          "type": "string",
+          "description": "项目"
+        },
+        "domain": {
+          "type": "string",
+          "description": "水质或生境或景观"
+        },
+        "target": {
+          "type": "string",
+          "description": "目标状态"
+        },
+        "allowed": {
+          "type": "array",
+          "description": "证据类别"
+        },
+        "deadline": {
+          "type": "integer",
+          "description": "期限"
+        }
+      },
+      "refs": {
+        "project": "projects.id"
+      }
+    },
+    "stations": {
+      "description": "站点初始代表范围",
+      "columns": {
+        "id": {
+          "type": "string",
+          "description": "站点"
+        },
+        "reaches": {
+          "type": "array",
+          "description": "代表河段"
+        },
+        "position": {
+          "type": "string",
+          "description": "上游或本段"
+        },
+        "start_day": {
+          "type": "integer",
+          "description": "起效"
+        }
+      },
+      "refs": {}
+    },
+    "measurements": {
+      "description": "左删失检出限和复测标识；未置入成效答案",
+      "columns": {
+        "id": {
+          "type": "string",
+          "description": "读数"
+        },
+        "sample": {
+          "type": "string",
+          "description": "独立样品"
+        },
+        "station": {
+          "type": "string",
+          "description": "站点"
+        },
+        "day": {
+          "type": "integer",
+          "description": "采样日"
+        },
+        "flow_class": {
+          "type": "string",
+          "description": "水文"
+        },
+        "value": {
+          "type": "number",
+          "description": "毫克每升读值"
+        },
+        "lod": {
+          "type": "number",
+          "description": "检出限"
+        },
+        "censored": {
+          "type": "boolean",
+          "description": "低于限"
+        },
+        "design": {
+          "type": "string",
+          "description": "计划或定向"
+        },
+        "known_day": {
+          "type": "integer",
+          "description": "结果知悉日"
+        }
+      },
+      "refs": {
+        "station": "stations.id"
+      }
+    },
+    "surveys": {
+      "description": "生境调查的努力不同，比例不是独立样本数",
+      "columns": {
+        "id": {
+          "type": "string",
+          "description": "调查"
+        },
+        "reach": {
+          "type": "string",
+          "description": "河段"
+        },
+        "day": {
+          "type": "integer",
+          "description": "日序"
+        },
+        "effort_minutes": {
+          "type": "integer",
+          "description": "观察努力"
+        },
+        "native_cover": {
+          "type": "number",
+          "description": "本地植被覆盖"
+        },
+        "sensitive": {
+          "type": "boolean",
+          "description": "含敏感物种位置"
+        }
+      },
+      "refs": {}
+    },
+    "experts": {
+      "description": "专家专业范围",
+      "columns": {
+        "id": {
+          "type": "string",
+          "description": "专家"
+        },
+        "domains": {
+          "type": "array",
+          "description": "可复核领域"
+        }
+      },
+      "refs": {}
+    },
+    "reviews": {
+      "description": "意见或证据撤回及其已知期",
+      "columns": {
+        "id": {
+          "type": "string",
+          "description": "复核"
+        },
+        "expert": {
+          "type": "string",
+          "description": "专家"
+        },
+        "target": {
+          "type": "string",
+          "description": "目标"
+        },
+        "kind": {
+          "type": "string",
+          "description": "意见或覆盖更正或撤回"
+        },
+        "finding": {
+          "type": "string",
+          "description": "事实"
+        },
+        "known_day": {
+          "type": "integer",
+          "description": "获知日"
+        }
+      },
+      "refs": {
+        "expert": "experts.id"
+      }
+    },
+    "shared_work": {
+      "description": "共享物理工程量的实际认领，允许暴露重复争议",
+      "columns": {
+        "id": {
+          "type": "string",
+          "description": "认领"
+        },
+        "work_id": {
+          "type": "string",
+          "description": "实体工程"
+        },
+        "project": {
+          "type": "string",
+          "description": "项目"
+        },
+        "quantity": {
+          "type": "number",
+          "description": "申报量"
+        },
+        "verified_quantity": {
+          "type": "number",
+          "description": "独立核实总量"
+        }
+      },
+      "refs": {
+        "project": "projects.id"
+      }
+    },
+    "payments": {
+      "description": "历史已付与验收状态独立保留",
+      "columns": {
+        "id": {
+          "type": "string",
+          "description": "支付"
+        },
+        "project": {
+          "type": "string",
+          "description": "项目"
+        },
+        "amount_cents": {
+          "type": "integer",
+          "description": "金额"
+        },
+        "day": {
+          "type": "integer",
+          "description": "日序"
+        }
+      },
+      "refs": {
+        "project": "projects.id"
+      }
+    },
+    "publications": {
+      "description": "公众原说明",
+      "columns": {
+        "id": {
+          "type": "string",
+          "description": "说明"
+        },
+        "project": {
+          "type": "string",
+          "description": "项目"
+        },
+        "day": {
+          "type": "integer",
+          "description": "日序"
+        },
+        "text": {
+          "type": "string",
+          "description": "原文"
+        }
+      },
+      "refs": {
+        "project": "projects.id"
+      }
+    }
+  }
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "id": "a0",
+    "project": "p1",
+    "domain": "水质",
+    "target": "总磷不超过0.1毫克每升",
+    "allowed": [
+      "采样检测"
+    ],
+    "deadline": 40
+  },
+  {
+    "id": "a1",
+    "project": "p1",
+    "domain": "生境",
+    "target": "本地植被覆盖至少0.7",
+    "allowed": [
+      "定点调查"
+    ],
+    "deadline": 40
+  },
+  {
+    "id": "a2",
+    "project": "p1",
+    "domain": "景观",
+    "target": "原风貌复核符合",
+    "allowed": [
+      "专业复核"
+    ],
+    "deadline": 40
+  },
+  {
+    "id": "a3",
+    "project": "p2",
+    "domain": "水质",
+    "target": "总磷不超过0.1毫克每升",
+    "allowed": [
+      "采样检测"
+    ],
+    "deadline": 40
+  },
+  {
+    "id": "a4",
+    "project": "p2",
+    "domain": "生境",
+    "target": "本地植被覆盖至少0.7",
+    "allowed": [
+      "定点调查"
+    ],
+    "deadline": 40
+  },
+  {
+    "id": "a5",
+    "project": "p2",
+    "domain": "景观",
+    "target": "原风貌复核符合",
+    "allowed": [
+      "专业复核"
+    ],
+    "deadline": 40
+  }
+]

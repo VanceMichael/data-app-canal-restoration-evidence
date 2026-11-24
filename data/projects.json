@@ -1,0 +1,29 @@
+[
+  {
+    "id": "p1",
+    "reach": "中段",
+    "start_day": 10,
+    "deadline": 40,
+    "physical_work": "岸线米",
+    "contract_cents": 1000000,
+    "retain_fraction": 0.2
+  },
+  {
+    "id": "p2",
+    "reach": "中段",
+    "start_day": 12,
+    "deadline": 40,
+    "physical_work": "岸线米",
+    "contract_cents": 800000,
+    "retain_fraction": 0.2
+  },
+  {
+    "id": "p3",
+    "reach": "上游",
+    "start_day": 5,
+    "deadline": 35,
+    "physical_work": "清淤方",
+    "contract_cents": 1500000,
+    "retain_fraction": 0.3
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "s1",
+    "reaches": [
+      "中段"
+    ],
+    "position": "本段",
+    "start_day": 1
+  },
+  {
+    "id": "s2",
+    "reaches": [
+      "上游"
+    ],
+    "position": "上游",
+    "start_day": 1
+  },
+  {
+    "id": "s3",
+    "reaches": [
+      "下游"
+    ],
+    "position": "本段",
+    "start_day": 1
+  }
+]

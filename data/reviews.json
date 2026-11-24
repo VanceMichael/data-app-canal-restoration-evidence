@@ -1,0 +1,26 @@
+[
+  {
+    "id": "r1",
+    "expert": "e3",
+    "target": "a2",
+    "kind": "意见",
+    "finding": "原风貌符合，范围仅p1景观",
+    "known_day": 39
+  },
+  {
+    "id": "r2",
+    "expert": "e1",
+    "target": "s1",
+    "kind": "覆盖更正",
+    "finding": "第20日起受外部引水影响，不能代表中段",
+    "known_day": 45
+  },
+  {
+    "id": "r3",
+    "expert": "e2",
+    "target": "a4",
+    "kind": "意见",
+    "finding": "仍需补做计划窗口观察",
+    "known_day": 39
+  }
+]
